@@ -1,13 +1,20 @@
 import 'dart:core';
 import 'dart:core';
 import 'package:flutter/material.dart';
+import 'package:flutter_widget/searchbar_loading.dart';
 import 'package:flutter_widget/seekBar.dart';
 import 'package:flutter_widget/textViewScreen.dart';
+import 'Toggle_spinner.dart';
+import 'alert.dart';
 import 'buttonScreen.dart';
+import 'cameraActivity.dart';
 import 'cardview.dart';
 import 'checkbox.dart';
 import 'datePicker.dart';
 import 'googleMap.dart';
+import 'gridview.dart';
+import 'imageView_icons.dart';
+import 'layout_row_col.dart';
 
 void main() => runApp(MyApp());
 
@@ -55,13 +62,12 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
     "Button",
     "CheckBox & RadioButton",
     "Card",
-    "Date & Time Picker",
+    "Date & Time Picker",//done
     "GoogleMap",
-    "SeekBar & RatingBar",
-    "SearchBar",
-    "Loading or Progress bar",
+    "SeekBar & RatingBar",//seek
+    "SearchBar & Progress bar",
     "Toggle Button & spinner"
-    "Image   View & Icons",
+    "Image View & Icons",
     "Camera Activity",
     "Alert Dialogbox",
     "Layout:(Row-Column)",
@@ -76,9 +82,7 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
     Icons.map,
     Icons.settings_ethernet,
     Icons.search,
-    Icons.sync_problem,
     Icons.arrow_drop_down_circle,
-
     Icons.image,
     Icons.camera_alt,
     Icons.add_alert,
@@ -93,8 +97,13 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
     DatePickerScreen(),
     GoogleMapActivity(),
     SeekbarandRating(),
-
-
+    Loading_SearchBar(),
+    SpinnerToggleButton(),
+    ImageViewIcons(),
+    CameraActivity(),
+    AlertBox(),
+    Row_Col_layout(),
+    GridViewScreen()
     ];
 
 
