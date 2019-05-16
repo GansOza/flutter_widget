@@ -9,6 +9,7 @@ class DateAndroid extends StatefulWidget {
 class _DateAndroidState extends State<DateAndroid> {
   //android date picker
   DateTime selectedDate = DateTime.now();
+
   Future<Null> _selectDate(BuildContext context) async {
     final DateTime picked = await showDatePicker(
         context: context,
@@ -20,6 +21,7 @@ class _DateAndroidState extends State<DateAndroid> {
         selectedDate = picked;
       });
   }
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -41,8 +43,8 @@ class _DateAndroidState extends State<DateAndroid> {
         ),
       ),
     );
-  }
 
+  }
 }
 
 

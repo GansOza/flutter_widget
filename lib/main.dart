@@ -3,7 +3,10 @@ import 'dart:core';
 import 'package:flutter/material.dart';
 import 'package:flutter_widget/searchbar_loading.dart';
 import 'package:flutter_widget/seekBar.dart';
+import 'package:flutter_widget/splashScreen.dart';
+import 'package:flutter_widget/temp.dart';
 import 'package:flutter_widget/textViewScreen.dart';
+import 'MenuDashboardPage.dart';
 import 'Toggle_spinner.dart';
 import 'alert.dart';
 import 'buttonScreen.dart';
@@ -13,6 +16,7 @@ import 'checkbox.dart';
 import 'datePicker.dart';
 import 'googleMap.dart';
 import 'gridview.dart';
+import 'heroanimation.dart';
 import 'imageView_icons.dart';
 import 'layout_row_col.dart';
 
@@ -24,6 +28,9 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -66,12 +73,16 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
     "GoogleMap",
     "SeekBar & RatingBar",//seek
     "SearchBar & Progress bar",
-    "Toggle Button & spinner"
+    "Toggle Button & spinner",
     "Image View & Icons",
     "Camera Activity",
     "Alert Dialogbox",
     "Layout:(Row-Column)",
-    "Grid View"];
+    "Grid View",
+  "Splash Screen",
+    "Hero Animation",
+  "DesignMenu",
+  "Temp"];
 
   final icons = [
     Icons.text_fields,
@@ -87,7 +98,11 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
     Icons.camera_alt,
     Icons.add_alert,
     Icons.view_column,
-    Icons.grid_on ];
+    Icons.grid_on ,
+  Icons.folder_special,
+  Icons.filter_b_and_w,
+  Icons.ac_unit,
+  Icons.settings_system_daydream];
 
   final screenName =[
     TextViewScreen(),
@@ -103,17 +118,19 @@ class _MyHomeScreenState extends State<MyHomeScreen> {
     CameraActivity(),
     AlertBox(),
     Row_Col_layout(),
-    GridViewScreen()
+    GridViewScreen(),
+    SplashScreen(),
+    Heroanimation(),
+    MenuDashboardPage(),
+    FilterAnimationGoogleIOTutorial()
     ];
-
 
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
-
       itemCount: data == null ? 0 :data.length,
         separatorBuilder: (context,index)=> Divider(),
-    itemBuilder: (BuildContext context, int index) {
+        itemBuilder: (BuildContext context, int index) {
         return ListTile(
           leading:CircleAvatar(
             child: new Icon(icons[index],color: Colors.greenAccent,),//showing front of the line,
